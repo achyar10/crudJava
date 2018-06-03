@@ -52,7 +52,11 @@ public class mhsForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_mahasiswa = new javax.swing.JTable();
+        jTable_mahasiswa = new javax.swing.JTable(){
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
         jLabel1 = new javax.swing.JLabel();
         jButton_insert = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
